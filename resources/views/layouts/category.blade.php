@@ -34,25 +34,9 @@
 		@endforeach
           
       </header>
-
-      <main role="main">
-        @if (session('status'))
-            <div class="alert alert-{{ session('status')[0] }}">
-                {!! session('status')[1] !!}
-            </div>
-        @endif
-        @if($errors->any())
-          <div class="alert alert-danger">
-            <ul>
-              @foreach($errors->all() as $error)
-                <li>{{ $error }}</li>
-              @endforeach
-            </ul>
-          </div>
-        @endif
-
-        @yield('content')
-      </main>
+    @foreach($products as $product)
+       
+    @endforeach
 
       <footer class="footer">
         <p>
@@ -63,3 +47,4 @@
     </div>
 </body>
 </html>
+
